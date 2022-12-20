@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -152,7 +155,43 @@ public class Queue_Learn {
 		// demoQueue = []
 
 		System.out.println("demoQueue = " + demoQueue); // demoQueue = []
-
+		
+		/*
+		 * Construct queue from array
+		 */
+		
+		String fruits[] = {"apple", "grape", "banana", "orange"};
+		
+		Queue<String> fruitQueue = new LinkedList<>();
+		
+		Collections.addAll(fruitQueue, fruits);
+		
+		System.out.println("fruitQueue = " + fruitQueue); // fruitQueue = [apple, grape, banana, orange]
+		
+		/*
+		 * Construct array from queue
+		 */
+		
+		String fruitArr[] = fruitQueue.toArray(new String[fruitQueue.size()]);
+		
+		System.out.println("fruitArr = " + Arrays.toString(fruitArr)); // fruitArr = [apple, grape, banana, orange]
+		
+		/*
+		 * Iterating over the contents of a queue
+		 */
+		
+		Iterator itr = fruitQueue.iterator();
+		
+		while (itr.hasNext()) {
+			System.out.print(itr.next() + " ");
+		}
+		
+		System.out.println();
+		
+		for (String fruit : fruitQueue) {
+			System.out.print(fruit + " ");
+		}
+		
 	}
 
 }
