@@ -1,3 +1,6 @@
-# Learn Java Collections Framework
+### Learn Java Collections Framework
 
-## A handy guide repository which implements some of the methods declared by the Collection interfaces.
+
+
+|                     :---                    |                         :---:                                                                               |
+| Queue (Using LinkedList Class)              | [View Code](https://github.com/tridibsamanta/Learn-Java-Collections-Framework/blob/main/Queue_Learn.java)   |
