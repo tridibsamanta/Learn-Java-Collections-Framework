@@ -49,7 +49,7 @@ public class PriorityQueue_Learn {
 
 		PriorityQueue<Integer> maxQueue = new PriorityQueue<>(Comparator.reverseOrder());
 		// head element will be the largest value (max-heap)
-		
+
 		maxQueue.add(30);
 		maxQueue.add(20);
 		maxQueue.add(50);
@@ -60,45 +60,43 @@ public class PriorityQueue_Learn {
 		maxQueue.offer(40);
 
 		System.out.println("maxQueue = " + maxQueue); // maxQueue = [50, 40, 30, 10, 20]
-		
-		
+
 		/*
 		 * Remove an element from the queue
 		 * 
 		 * E remove() : Declared in the Queue interface. Removes the element at the head
-		 * of the queue returning the element in the process. It throws NoSuchElementException 
-		 * if the queue is empty.
+		 * of the queue returning the element in the process. It throws
+		 * NoSuchElementException if the queue is empty.
 		 * 
-		 * boolean remove(Object obj) : Removes one instance of obj from the queue. Returns true
-		 * if the element was removed. Otherwise, returns false. 
+		 * boolean remove(Object obj) : Removes one instance of obj from the queue.
+		 * Returns true if the element was removed. Otherwise, returns false.
 		 */
-		
+
 		// minQueue = [10, 20, 50, 30, 40]
 		minQueue.remove();
 		// minQueue = [20, 30, 50, 40]
 
 		System.out.println("minQueue = " + minQueue); // minQueue = [20, 30, 50, 40]
-		
+
 		// minQueue = [20, 30, 50, 40]
 		int removedElement = minQueue.remove();
 		// minQueue = [30, 40, 50]
 
 		System.out.println("Element removed = " + removedElement); // Element removed = 20
-		
+
 		// minQueue = [30, 40, 50]
 		minQueue.remove(40);
 		// minQueue = [30, 50]
-		
+
 		System.out.println("minQueue = " + minQueue); // minQueue = [30, 50]
-		
-		
+
 		/*
 		 * Get the element at the head of the queue
 		 * 
 		 * E peek() : Declared in the Queue interface. Returns the element at the head
 		 * of the queue. It returns null if the queue is empty.
 		 */
-		
+
 		// maxQueue = [50, 40, 30, 10, 20]
 		int headElement = maxQueue.peek();
 
@@ -111,13 +109,13 @@ public class PriorityQueue_Learn {
 		 * of the queue, removing the element in the process. It returns null if the
 		 * queue is empty.
 		 */
-		
+
 		// maxQueue = [50, 40, 30, 10, 20]
 		headElement = maxQueue.poll();
 		// maxQueue = [40, 20, 30, 10]
 
 		System.out.println("Head element = " + headElement); // Head element = 50
-		
+
 		// maxQueue = [40, 20, 30, 10]
 		maxQueue.poll();
 		// maxQueue = [30, 20, 10]
@@ -130,7 +128,7 @@ public class PriorityQueue_Learn {
 		 * int size() : Declared in the Collection interface. Returns the number of
 		 * elements held in the invoking collection.
 		 */
-		
+
 		// maxQueue = [30, 20, 10]
 		int queueSize = maxQueue.size();
 
@@ -157,7 +155,7 @@ public class PriorityQueue_Learn {
 		 */
 
 		int value = 20;
-		
+
 		// maxQueue = [30, 20, 10]
 		if (maxQueue.contains(value))
 			System.out.println("Queue contains " + value);
@@ -170,7 +168,7 @@ public class PriorityQueue_Learn {
 		 * void clear() : Declared in the Collection interface. Removes all elements
 		 * from the invoking collection.
 		 */
-		
+
 		// minQueue = [30, 50]
 		minQueue.clear();
 		// minQueue = []
@@ -181,14 +179,14 @@ public class PriorityQueue_Learn {
 		 * Construct queue from array
 		 */
 
-		Integer nums[] = {40, 10, 50, 20, 30};
+		Integer nums[] = { 40, 10, 50, 20, 30 };
 
 		PriorityQueue<Integer> numsMinQueue = new PriorityQueue<>();
 
 		Collections.addAll(numsMinQueue, nums);
 
 		System.out.println("numsMinQueue = " + numsMinQueue); // numsQueue = [10, 20, 50, 40, 30]
-		
+
 		PriorityQueue<Integer> numsMaxQueue = new PriorityQueue<>(Comparator.reverseOrder());
 
 		Collections.addAll(numsMaxQueue, nums);
