@@ -68,8 +68,9 @@ public class PriorityQueue_Learn {
 		 * of the queue returning the element in the process. It throws
 		 * NoSuchElementException if the queue is empty.
 		 * 
-		 * boolean remove(Object obj) : Removes one instance of obj from the queue.
-		 * Returns true if the element was removed. Otherwise, returns false.
+		 * boolean remove(Object obj) : Declared in the Collection interface. Removes
+		 * one instance of obj from the queue. Returns true if the element was removed.
+		 * Otherwise, returns false.
 		 */
 
 		// minQueue = [10, 20, 50, 30, 40]
