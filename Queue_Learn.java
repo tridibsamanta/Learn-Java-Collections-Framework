@@ -64,6 +64,10 @@ public class Queue_Learn {
 		 * E remove() : Declared in the Queue interface. Removes the element at the head
 		 * of the queue returning the element in the process. It throws
 		 * NoSuchElementException if the queue is empty.
+		 * 
+		 * boolean remove(Object obj) : Declared in the Collection interface. Removes
+		 * one instance of obj from the queue. Returns true if the element was removed.
+		 * Otherwise, returns false.
 		 */
 
 		demoQueue.remove();
@@ -75,6 +79,14 @@ public class Queue_Learn {
 		// demoQueue = [50, 20, 40]
 
 		System.out.println("Element removed = " + removedElement); // Element removed = 10
+
+		demoQueue.add(10);
+		// demoQueue = [50, 20, 40, 10]
+
+		demoQueue.remove(10);
+		// demoQueue = [50, 20, 40]
+
+		System.out.println("demoQueue = " + demoQueue); // demoQueue = [50, 20, 40]
 
 		/*
 		 * Get the element at the head of the queue
@@ -155,43 +167,43 @@ public class Queue_Learn {
 		// demoQueue = []
 
 		System.out.println("demoQueue = " + demoQueue); // demoQueue = []
-		
+
 		/*
 		 * Construct queue from array
 		 */
-		
-		String fruits[] = {"apple", "grape", "banana", "orange"};
-		
+
+		String fruits[] = { "apple", "grape", "banana", "orange" };
+
 		Queue<String> fruitQueue = new LinkedList<>();
-		
+
 		Collections.addAll(fruitQueue, fruits);
-		
+
 		System.out.println("fruitQueue = " + fruitQueue); // fruitQueue = [apple, grape, banana, orange]
-		
+
 		/*
 		 * Construct array from queue
 		 */
-		
+
 		String fruitArr[] = fruitQueue.toArray(new String[fruitQueue.size()]);
-		
+
 		System.out.println("fruitArr = " + Arrays.toString(fruitArr)); // fruitArr = [apple, grape, banana, orange]
-		
+
 		/*
 		 * Iterating over the contents of a queue
 		 */
-		
+
 		Iterator itr = fruitQueue.iterator();
-		
+
 		while (itr.hasNext()) {
 			System.out.print(itr.next() + " ");
 		}
-		
+
 		System.out.println();
-		
+
 		for (String fruit : fruitQueue) {
 			System.out.print(fruit + " ");
 		}
-		
+
 	}
 
 }
