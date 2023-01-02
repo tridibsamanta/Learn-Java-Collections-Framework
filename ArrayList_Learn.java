@@ -1,15 +1,9 @@
-import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Deque;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
 
 /*
  * An ArrayList is a dynamic-sized array. It grows and shrinks in size
